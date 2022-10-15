@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'br.com.rogervieira'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.bytedeco', name: 'javacv', version: '1.5.7'
+    implementation group: 'org.bytedeco.javacpp-presets', name: 'ffmpeg-platform', version: '4.1-1.4.4'
+    // https://mvnrepository.com/artifact/org.bytedeco/ffmpeg-platform-gpl
+    implementation group: 'org.bytedeco', name: 'ffmpeg-platform-gpl', version: '5.0-1.5.7'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
